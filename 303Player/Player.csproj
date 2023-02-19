@@ -1,0 +1,233 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{150C30F7-B867-4B8B-85D0-533D5D4306F7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>_303Player</RootNamespace>
+    <AssemblyName>Player</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>
+    </ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.52">
+      <HintPath>..\..\..\..\Documents\Dlls\Bunifu\Bunifu_UI_v1.52.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI">
+      <HintPath>..\..\..\..\Desktop\Guna.UI-Framework-Lib-master\Guna.UI.WinForms_v1.0.0.9\.net 4.0\Guna.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI2">
+      <HintPath>..\..\..\..\Documents\Dlls\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="dbProgramsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbProgramsDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frmPlayer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPlayer.Designer.cs">
+      <DependentUpon>frmPlayer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmHelp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHelp.Designer.cs">
+      <DependentUpon>frmHelp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmIni.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmIni.Designer.cs">
+      <DependentUpon>frmIni.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSettings.Designer.cs">
+      <DependentUpon>frmSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmPlayer.resx">
+      <DependentUpon>frmPlayer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHelp.resx">
+      <DependentUpon>frmHelp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmIni.resx">
+      <DependentUpon>frmIni.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSettings.resx">
+      <DependentUpon>frmSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="dbProgramsDataSet.xsc">
+      <DependentUpon>dbProgramsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="dbProgramsDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbProgramsDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbProgramsDataSet.xss">
+      <DependentUpon>dbProgramsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icon.ico" />
+    <None Include="Resources\newIcon.png" />
+    <None Include="Resources\newSem Título-1.png" />
+    <None Include="Resources\Random.png" />
+    <None Include="Resources\ActiveRandom.png" />
+    <None Include="Resources\ActiveCircleButtonBlueTheme.png" />
+    <None Include="Resources\CircleButtonBlueTheme.png" />
+    <None Include="Resources\CircleButtonBlueTheme1.png" />
+    <None Include="Resources\Link-Select.ico" />
+    <None Include="Resources\Normal-Select.ico" />
+    <None Include="Resources\pnlwmpPausePlay.png" />
+    <None Include="Resources\pnlwmpPausePause.png" />
+    <None Include="Resources\icons8_left_500px.png" />
+    <None Include="Resources\Back_Dark.png" />
+    <None Include="Resources\right_500px.png" />
+    <None Include="Resources\full_screen_50 0px.png" />
+    <None Include="Resources\reboot.png" />
+    <None Include="Resources\save_500px.png" />
+    <None Include="Resources\home_500px.png" />
+    <None Include="Resources\home_23px.png" />
+    <None Include="Resources\Play Dark Active.png" />
+    <None Include="Resources\Playlist Dark Active.png" />
+    <None Include="Resources\Send Dark.png" />
+    <None Include="Resources\Send.png" />
+    <None Include="Resources\email_send_480px.png" />
+    <None Include="Resources\Back Dark.png" />
+    <None Include="Resources\sound Dark.png" />
+    <None Include="Resources\Settings Dark.png" />
+    <None Include="Resources\Save Dark.png" />
+    <None Include="Resources\Playlist Dark.png" />
+    <None Include="Resources\Play Dark.png" />
+    <None Include="Resources\Open DarkAS.png" />
+    <None Include="Resources\Next Dark.png" />
+    <None Include="Resources\Mute Dark.png" />
+    <None Include="Resources\More Dark.png" />
+    <None Include="Resources\Menu Dark.png" />
+    <None Include="Resources\Load Dark.png" />
+    <None Include="Resources\icon Dark.png" />
+    <None Include="Resources\Full Screen Dark.png" />
+    <None Include="Resources\Settings.png" />
+    <None Include="Resources\More.png" />
+    <None Include="Resources\Load.png" />
+    <None Include="Resources\Full Screen.png" />
+    <None Include="Resources\full_screen_500px.png" />
+    <None Include="Resources\more_48px.png" />
+    <None Include="Resources\settings_500px.png" />
+    <None Include="Resources\reboot_500px.png" />
+    <None Include="Resources\save.png" />
+    <None Include="Resources\Repeat1.png" />
+    <None Include="Resources\Repeat.png" />
+    <None Include="Resources\Sound.png" />
+    <None Include="Resources\Mute.png" />
+    <None Include="Resources\Open.png" />
+    <None Include="Resources\Next.png" />
+    <None Include="Resources\Back.png" />
+    <None Include="Resources\Play.png" />
+    <None Include="Resources\Playlist.png" />
+    <None Include="Resources\Home.png" />
+    <None Include="Resources\Menu.png" />
+    <None Include="Resources\btnMinimizeActive.png" />
+    <None Include="Resources\btnMinimize.png" />
+    <None Include="Resources\btnMaximizeActive.png" />
+    <None Include="Resources\btnMaximize.png" />
+    <None Include="Resources\btnCloseActive.png" />
+    <None Include="Resources\btnClose.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
